@@ -4,3 +4,5 @@ stash
 *.pyc
 *.db
 cl.hpp
+dist/
+
