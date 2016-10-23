@@ -26,7 +26,7 @@ option(SAMPLES "Enable compilation of the examples" OFF)
 option(TUNERS "Enable compilation of the tuners" OFF)
 option(CLIENTS "Enable compilation of the clients to test and compare performance" OFF)
 option(TESTS "Enable compilation of the correctness tests" OFF)
-option(SHARED_LIB "Builds library as shared" ON)
+option(BUILD_SHARED "Builds library as shared" ON)
 
 # Compile in verbose mode with additional diagnostic messages
 option(VERBOSE "Compile in verbose mode for additional diagnostic messages" OFF)
@@ -172,7 +172,7 @@ foreach(ROUTINE ${LEVELX_ROUTINES})
 endforeach()
 
 # Creates and links the library
-if(SHARED_LIB)
+if(BUILD_SHARED)
    set(SHARED_STR SHARED)
 endif()
 add_library(clblast ${SHARED_STR} ${SOURCES})
